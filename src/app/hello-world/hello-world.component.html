@@ -12,13 +12,14 @@
   </div>
   <div class="row">
     <div>
-      Enter some text: <input type="text" (input)="inputhandler($event)"><br>
+      <label>Enter some text: </label>
+      <input type="text" (input)="inputhandler($event)"><br>
       Your Text: {{value}}
     </div>
   </div>
 </div>
 <div class="container-fluid mt-5">
-  <div class="row col-md-2 ms-1">
+  <div class="row col-md-2 ms-1 me-1">
     <h3 class="bg-primary text-white text-center mb-0">
       {{movieTitle}}
     </h3>
