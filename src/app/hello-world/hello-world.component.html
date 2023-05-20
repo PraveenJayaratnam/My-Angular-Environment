@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div>
+      <h1 [innerText]="title"></h1>
+      <button class="btn btn-success" [disabled]="isDisabled">Click me</button>
+      <button class="btn btn-primary ms-2" [disabled]="isDisabled" (click)="clickMe()">
+        <i class="bi bi-heart"></i>
+        Like
+      </button>
+      <h2>{{'Number of Likes: '+clickCount}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      Enter some text: <input type="text" (input)="inputhandler($event)"><br>
+      Your Text: {{value}}
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-5">
+  <div class="row col-md-2 ms-1">
+    <h3 class="bg-primary text-white text-center mb-0">
+      {{movieTitle}}
+    </h3>
+    <mat-list dense class="bg-primary">
+      <mat-list-item class="text-center" *ngFor="let movie of movies">
+        {{movie}}
+      </mat-list-item>
+    </mat-list>
+
+  </div>
+  <div class="row mt-3">
+    <div>
+      <button mat-raised-button>Submit</button>
+    </div>
+  </div>
+</div>
